@@ -3,7 +3,17 @@ headers: response.headers
 body: response.body
 
 response:
-  resolver: inline
+  resolver: conditional
+  when:
+    - matches: request.url.pathname
+      pattern: '^/?$'
+      use: helloWorld
+    - matches: request.url.pathname
+      pattern: '^/hello-world/?$'
+      use: helloWorld
+  default: notFound
+
+helloWorld:
   inline:
     status:
       resolver: inline
@@ -17,3 +27,18 @@ response:
     body:
       resolver: inline
       inline: 'Hello World!'
+
+notFound:
+  inline:
+    status:
+      resolver: inline
+      inline: 404
+    headers:
+      resolver: inline
+      inline:
+        content-type:
+          resolver: inline
+          inline: 'text/string'
+    body:
+      resolver: inline
+      inline: 'Page not found!'
