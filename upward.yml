@@ -11,6 +11,9 @@ response:
     - matches: request.url.pathname
       pattern: '^/hello-world/?$'
       use: helloWorld
+    - matches: request.url.pathname
+      pattern: '^/js/app.js'
+      use: appScript
   default: notFound
 
 helloWorld:
@@ -47,3 +50,23 @@ notFound:
     body:
       resolver: inline
       inline: 'Page not found!'
+
+appScript:
+  inline:
+    status:
+      resolver: inline
+      inline: 200
+    headers:
+      resolver: inline
+      inline:
+        content-type:
+          resolver: inline
+          inline: 'application/javascript'
+    body:
+      resolver: file
+      file:
+        resolver: inline
+        inline: './dist/app.js'
+      encoding:
+        resolver: inline
+        inline: 'utf-8'
