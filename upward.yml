@@ -1,0 +1,19 @@
+status: response.status
+headers: response.headers
+body: response.body
+
+response:
+  resolver: inline
+  inline:
+    status:
+      resolver: inline
+      inline: 200
+    headers:
+      resolver: inline
+      inline:
+        content-type:
+          resolver: inline
+          inline: 'text/string'
+    body:
+      resolver: inline
+      inline: 'Hello World!'

@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "James Calcaben <calcaben@adobe.com>",
   "license": "MIT",
+  "scripts": {
+      "start": "node server.js"
+  },
   "dependencies": {
     "@magento/upward-js": "^2.2.0-rc.1",
     "express": "^4.17.1"
