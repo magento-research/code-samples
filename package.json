@@ -1,0 +1,12 @@
+{
+  "name": "pwa-studio-code-samples",
+  "version": "1.0.0",
+  "description": "A repository of code samples using PWA Studio libraries",
+  "main": "index.js",
+  "author": "James Calcaben <calcaben@adobe.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@magento/upward-js": "^2.2.0-rc.1",
+    "express": "^4.17.1"
+  }
+}
