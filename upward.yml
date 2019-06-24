@@ -23,10 +23,15 @@ helloWorld:
       inline:
         content-type:
           resolver: inline
-          inline: 'text/string'
+          inline: 'text/html'
     body:
-      resolver: inline
-      inline: 'Hello World!'
+      resolver: template
+      engine: mustache
+      template: './templates/hello-world.mst'
+      provide:
+        title:
+          resolver: inline
+          inline: 'This is the page title!'
 
 notFound:
   inline:

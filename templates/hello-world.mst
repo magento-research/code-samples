@@ -1,0 +1,9 @@
+{{> templates/open-document}}
+
+  <title>{{ title }}</title>
+
+  {{> templates/open-body}}
+
+    <b>Hello Template World!</b>
+
+    {{> templates/close-document}}
