@@ -3,10 +3,16 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Home from './home';
 
+import Mask from '../../examples/Mask';
+
 const pages = [
   {
     url: '/',
     label: 'Home',
+  },
+  {
+    url: '/mask',
+    label: 'Mask Example',
   },
 ];
 
@@ -20,6 +26,7 @@ const App = props => {
           return <Home pages={pages} />;
         }}
       />
+      <Route path="/mask" component={Mask} />
     </Router>
   );
 };

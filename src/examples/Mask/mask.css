@@ -1,0 +1,25 @@
+.root {
+  background-color: #779ecb;
+  cursor: pointer;
+  display: block;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition-duration: 192ms;
+  transition-property: opacity, visibility;
+  transition-timing-function: linear;
+  visibility: hidden;
+  width: 100vw;
+  z-index: 2;
+  -webkit-appearance: none;
+  border: none;
+}
+
+.root_active {
+  composes: root;
+  opacity: 0.5;
+  transition-duration: 224ms;
+  visibility: visible;
+}
