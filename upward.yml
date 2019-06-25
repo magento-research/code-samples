@@ -6,17 +6,11 @@ response:
   resolver: conditional
   when:
     - matches: request.url.pathname
-      pattern: '^/?$'
-      use: helloWorld
-    - matches: request.url.pathname
-      pattern: '^/hello-world/?$'
-      use: helloWorld
-    - matches: request.url.pathname
       pattern: '^/js/app.js'
       use: appScript
-  default: notFound
+  default: app
 
-helloWorld:
+app:
   inline:
     status:
       resolver: inline
@@ -30,7 +24,7 @@ helloWorld:
     body:
       resolver: template
       engine: mustache
-      template: './templates/hello-world.mst'
+      template: './templates/app.mst'
       provide:
         title:
           resolver: inline
