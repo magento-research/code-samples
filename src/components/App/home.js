@@ -6,7 +6,7 @@ const Home = props => {
 
   const links = pages.map(page => {
     return (
-      <li>
+      <li key={page.url}>
         <Link to={page.url}>{page.label}</Link>
       </li>
     );
