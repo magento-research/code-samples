@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Home from './home';
 
-import Mask from '../../examples/Mask';
+import Mask from '../../examples/venia/Mask';
 
 const pages = [
   {
