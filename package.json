@@ -12,6 +12,7 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
+    "@magento/peregrine": "^3.0.0",
     "@magento/upward-js": "^2.2.0-rc.1",
     "@magento/venia-concept": "^3.0.0",
     "babel-loader": "^8.0.6",
