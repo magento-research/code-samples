@@ -11,7 +11,7 @@ export default () => {
     <>
       <form>
         <span>Set a query parameter: </span>
-        <input type="text" name="query" autocomplete="off" />
+        <input type="text" name="query" autoComplete="off" />
       </form>
       <p>
         The current value for the <code>query</code> parameter is: {queryParam}
