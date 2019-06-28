@@ -5,7 +5,10 @@ import Home from "./home";
 
 import { Mask } from "../../examples/venia";
 
-import { useSearchParamExample } from "../../examples/peregrine";
+import {
+  useSearchParamExample,
+  useQueryResultExample
+} from "../../examples/peregrine";
 
 const pages = [
   {
@@ -19,6 +22,10 @@ const pages = [
   {
     url: "/usesearchparam?query=hello+world",
     label: "useSearchParam Hook Example"
+  },
+  {
+    url: "/usequeryresult",
+    label: "useQueryResult Hook Example"
   }
 ];
 
@@ -34,6 +41,7 @@ const App = props => {
       />
       <Route path="/mask" component={Mask} />
       <Route path="/usesearchparam" component={useSearchParamExample} />
+      <Route path="/usequeryresult" component={useQueryResultExample} />
     </Router>
   );
 };
