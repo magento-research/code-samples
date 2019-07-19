@@ -7,7 +7,8 @@ import { Mask } from "../../examples/venia";
 
 import {
   useSearchParamExample,
-  useQueryResultExample
+  useQueryResultExample,
+  useQueryExample
 } from "../../examples/peregrine";
 
 const pages = [
@@ -26,6 +27,10 @@ const pages = [
   {
     url: "/usequeryresult",
     label: "useQueryResult Hook Example"
+  },
+  {
+    url: "/usequery",
+    label: "useQuery Hook Example"
   }
 ];
 
@@ -42,6 +47,7 @@ const App = props => {
       <Route path="/mask" component={Mask} />
       <Route path="/usesearchparam" component={useSearchParamExample} />
       <Route path="/usequeryresult" component={useQueryResultExample} />
+      <Route path="/usequery" component={useQueryExample} />
     </Router>
   );
 };
