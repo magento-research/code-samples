@@ -1,0 +1,30 @@
+{
+    "templateVersion": "0.1",
+    "product": {
+        "name": "PWA Studio Code Samples",
+        "description": "A collection of code samples to showcase PWA Studio pieces in small scale examples"
+    },
+    "contacts": {
+        "team": {
+            "name": "The Untitled Geese",
+            "DL": "Grp-Untitled-Geese",
+            "slackChannel": "pwa"
+        }
+    },
+    "ticketTracker": {
+        "functionalJiraQueue": {
+            "projectKey": "PWA",
+            "component": ""
+        },
+        "securityJiraQueue": {
+            "projectKey": "MAGREQ",
+            "component": "PWA"
+        }
+    },
+    "staticScan": {
+        "enable": false,
+        "frequency": "quarterly",
+        "customName": "PWA Studio Code Samples Static Scan",
+        "branchesToScan": ["master"]
+    }
+}
